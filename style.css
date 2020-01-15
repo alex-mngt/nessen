@@ -1,6 +1,515 @@
 /*
 Theme Name: Nessen
-Author: Alex Mongeot
-Author URI: http://monsiteweb.com
-Description: Theme pour la campagne du candidat Nessen Goiden aux municipales 2022
+Theme URI: http://wordpress.org/themes/twentythirteen
+Author: Alex Mongeot, Nessen Goinden, Damien Mathieu, Lucas Gil Garcia
+Description: Theme pour le candidat à l'election municipale 2020 Nessen Goinden
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
 */
+
+/* RESET */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* GENERAL STYLE */
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #B2D6D5;
+}
+
+main {
+    padding: 0 8vw;
+}
+
+/* HEADER STYLE  */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 20vh;
+    margin-top: 8vh;
+    position: absolute;
+    width: 100vw;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0 8vw;
+}
+
+.header p,
+.header a {
+    color: #6D9896;
+}
+
+.header>.menu .menu-list li {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    margin-left: 35px;
+}
+
+.header>.logo>a {
+    font-family: 'stolzl', sans-serif;
+    font-style: normal;
+    font-size: 35px;
+    font-weight: 300;
+
+}
+
+.header>.logo>a>span {
+    font-weight: 500;
+    line-height: 45px;
+}
+
+/* FOOTER STYLE */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vh 8vw;
+    background-color: #A8CBCA;
+}
+
+.footer p {
+    font-family: 'montserrat', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    color: white;
+    margin: 15px 0;
+}
+
+.footer .title {
+    font-weight: 700;
+    padding-bottom: 10px;
+    font-size: 22px;
+}
+
+/* FRONT PAGE STYLE  */
+
+.front-page .section-number {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-self: flex-end;
+    align-self: center;
+    grid-row: 1/3;
+    grid-column: 2;
+}
+
+.front-page .section-number p {
+    font-family: 'montserrat', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 35px;
+    letter-spacing: 2px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.front-page .section-number>.line {
+    width: 4px;
+    height: 30vh;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.front-page>.second-section,
+.front-page>.third-section {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.front-page>.second-section>.text,
+.front-page>.third-section>.actuality {
+    width: 550px;
+}
+
+/* SPECIFIC STYLE */
+
+.front-page>.first-section {
+    display: grid;
+    grid-template-columns: min-content auto;
+    grid-template-rows: auto min-content;
+    align-items: flex-end;
+    height: 100vh;
+}
+
+.front-page>.first-section .img-wrapper {
+    height: 45vh;
+    width: 50vh;
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.front-page>.first-section .img-wrapper img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+}
+
+.front-page>.first-section .catchphrase {
+    grid-row: 2;
+    grid-column: 1;
+    font-family: 'stolzl', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    color: white;
+    font-size: 65px;
+    white-space: nowrap;
+    margin: 60px 0;
+}
+
+.front-page>.first-section .catchphrase span {
+    line-height: 80px;
+}
+
+.front-page>.second-section>.text>.number {
+    font-family: 'stolzl', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 80px;
+    color: white;
+    margin-bottom: 35px;
+}
+
+.front-page>.second-section>.text>.paragraph {
+    font-family: 'montserrat', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    color: white;
+    line-height: 30px;
+    margin-bottom: 35px;
+}
+
+.front-page>.second-section>.text>button {
+    height: 60px;
+    background-color: white;
+    border: none;
+    padding: 0px 35px;
+    border-radius: 30px;
+    font-family: 'stolzl', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #6D9896;
+}
+
+.front-page>.third-section {
+    margin-bottom: 10vh;
+}
+
+.front-page>.third-section>.actuality>.title {
+    font-family: 'stolzl', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.front-page>.third-section>.actuality>.img-wrapper {
+    width: 100%;
+    height: 350px;
+}
+
+.front-page>.third-section>.actuality>.img-wrapper>img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.front-page>.third-section>.actuality>.excerpt {
+    font-family: 'montserrat', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    color: white;
+    margin-top: 20px;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
+.front-page>.third-section>.actuality>.link {
+    font-family: 'montserrat', sans-serif;
+    font-style: normal;
+    font-size: 22px;
+    color: white;
+    font-weight: 700;
+}
+
+/* PROGRAMME */
+
+.programme>.first-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.programme>.first-section>.title {
+    font-family: 'stolzl', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    color: white;
+    font-size: 65px;
+    white-space: nowrap;
+    margin: 60px 0;
+    line-height: 80px;
+    margin-bottom: 30px;
+}
+
+.programme>.first-section>.text {
+    font-family: 'montserrat', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    color: white;
+    line-height: 30px;
+    width: 650px;
+    margin-bottom: 100px;
+}
+
+.programme>.second-section {
+    margin-bottom: 100px;
+}
+
+.programme>.second-section>.axis-wrapper {
+    overflow: hidden;
+    transition: padding-bottom .3s ease-out;
+}
+
+.programme>.second-section>.axis-wrapper:nth-of-type(2) {
+    margin: 30px 0;
+}
+
+.programme>.second-section>.axis-wrapper>.title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.programme>.second-section>.axis-wrapper>.title-wrapper>h2 {
+    font-family: 'stolzl', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    color: white;
+    font-size: 35px;
+}
+
+.programme>.second-section>.axis-wrapper>.title-wrapper>div {
+    height: 40px;
+    width: 40px;
+    position: relative;
+}
+
+.programme>.second-section>.axis-wrapper>.content>p {
+    font-family: 'montserrat', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    color: white;
+    line-height: 30px;
+    padding: 15px 35px;
+}
+
+.programme>.second-section>.axis-wrapper>.content {
+    padding: 40px 0;
+}
+
+.programme>.second-section>.axis-wrapper>.title-wrapper>div>div::before {
+    transition: transform .3s ease-out;
+}
+
+.programme>.second-section>.axis-wrapper>.title-wrapper>div>div::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 5px;
+    background-color: white;
+}
+
+.programme>.second-section>.axis-wrapper>.title-wrapper>div>div::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    transform: rotate(90deg);
+}
+
+.programme>.second-section>.axis-wrapper>.title-wrapper>div>.rotated::before {
+    transform: rotate(0);
+}
+
+.actualites>.first-section {
+    height: 100vh;
+}
+
+.actualites>.filter>p,
+.actualites>.filter>a {}
