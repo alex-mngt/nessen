@@ -1,4 +1,4 @@
-        <footer class="footer">
+        <footer class="footer montserrat">
             <div class="column">
                 <p class="title">S'engager</p>
                 <p>Adhérer en ligne</p>
@@ -23,6 +23,7 @@
         </footer>
 
         <!-- Execution de la fonction wp_footer() obligatoire ! -->
-        <?php wp_footer();?>
-    </body>
-</html>
+        <?php wp_footer(); ?>
+        </body>
+
+        </html>
