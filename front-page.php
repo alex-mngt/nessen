@@ -2,7 +2,7 @@
 <main class="front-page">
     <section class="first-section">
         <div class="img-wrapper">
-            <?php echo wp_get_attachment_image(18, 'full') ?>
+            <?php echo wp_get_attachment_image(95, 'full') ?>
         </div>
         <div class="section-number">
             <p class="montserrat">01</p>
