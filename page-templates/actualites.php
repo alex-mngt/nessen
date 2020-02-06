@@ -11,6 +11,7 @@
         </svg>
         <div class="filters">
             <p class="montserrat">Filtres :</p>
+
             <a href="<?php the_permalink() ?>" class="montserrat <?php echo $_GET['filter'] == null ? 'bold' : ' ' ?>">Toute l'actualité</a>
 
             <?php
